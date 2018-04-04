@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div ng-app="contactDetails">
+        <a href="#!list">List</a>
+        <a href="#!entry"> New Entry</a>
+        <a href="{% url 'Newentry' % }">Newentry</a>
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>
