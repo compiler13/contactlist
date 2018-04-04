@@ -1,39 +1,42 @@
-<h4> New Entry</h4>
+{% include "list.html" %}
+<div ng-controller="postCtrl">
+        <h4> New Entry</h4>
 
 
-<form class="form-horizontal" ng-submit="submitNewentryForm()" role="form">
-    <div class="form-group">
-        <label for="Name" class="col-sm-3 control-label">Name</label>
-        <div class="col-sm-6">
-            <input type="text" id="Name" class="form-control" ng-model="Newentry.Name" />
-        </div>
-        <div class="col-sm-3"></div>
-
-    </div>
-
-    <div class="form-group">
-        <label for="phone" class="col-sm-3 control-label">phone</label>
-        <div class="col-sm-6">
-            <input type="text" id="phone" class="form-control" ng-model="Newentry.phone" />
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
-
-    <div class="form-group">
-        <label for="email" class="col-sm-3 control-label">Email</label>
-        <div class="col-sm-6">
-            <input type="text" id="email" class="form-control" ng-model="Newentry.email" />
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
-
-    <div class="form-group">
-        <label for="profession" class="col-sm-3 control-label">Profession</label>
-        <div class="col-sm-6">
-            <input type="text" id="profession" class="form-control" ng-model="Newentry.profession" />
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
-
-
-    <input type="submit" value="Save" class="btn btn-primary button-control  col-sm-offset-3" />
+        <form class="form-horizontal" role="form">
+               
+            <div class="form-group">
+                <label for="Name" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-6">
+                    <input type="text" id="Name" class="form-control" ng-model="form.name" />
+                </div>
+                <div class="col-sm-3"></div>
+        
+            </div>
+        
+            <div class="form-group">
+                <label for="phone" class="col-sm-3 control-label">phone</label>
+                <div class="col-sm-6">
+                    <input type="text" id="phone" class="form-control" ng-model="form.phone" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-6">
+                    <input type="text" id="email" class="form-control" ng-model="form.email" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        
+            <div class="form-group">
+                <label for="profession" class="col-sm-3 control-label">Profession</label>
+                <div class="col-sm-6">
+                    <input type="text" id="profession" class="form-control" ng-model="form.profession" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </form>
+        <Button ng-click="postContact()" type="submit"class="btn btn-primary button-control col-sm-offset-3">Post</Button>
+</div>
