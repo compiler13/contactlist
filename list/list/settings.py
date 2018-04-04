@@ -37,6 +37,7 @@ DEFAULT_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 
@@ -44,6 +45,9 @@ CUSTOM_APPS = [
 
     'rest_framework',
     'contactlist',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+    
 
 ]
 
@@ -92,6 +96,12 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -137,4 +147,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),    
 ]
 
-print BASE_DIR
+#print BASE_DIR

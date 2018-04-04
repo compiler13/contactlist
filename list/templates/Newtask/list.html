@@ -10,15 +10,25 @@
 </head>
 
 <body ng-app="myApp">
+        {% csrf_token %}
+        <script>
+            window.CONFIG = {};
+            window.CONFIG.CSRF_TOKEN = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+            //window.CONFIG.RELEASE_TAG = "{{ RELEASE_TAG }}";
+            //window.CONFIG.STATIC_URL = "{% static '' %}";
+            //window.CONFIG.COUNTRY = "{{ COUNTRY }}";
+            //window.CONFIG.LANGUAGE = "{{ LANGUAGE }}";
+        </script>
+    
+    
+        
     {% verbatim %}
     <div>
         <a href="#!list">List</a>
         <a href="#!entry"> New Entry</a>
         <div ng-controller="myCtrl">
-        <!-- <li ng-repeat="record in data">{{ record.name }}</li>-->
-        <h1> Hellow {{name}}</h1>
-        {% csrf_token %}
-{{ form.as_p }}
+        <li ng-repeat="record in data">{{ record.name }}</li>
+        <!-- <h1> Hello {{name}}</h1> -->
         
         </div>
     </div>

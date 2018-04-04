@@ -28,6 +28,6 @@ class ContactDetails(generics.RetrieveUpdateDestroyAPIView):
 
 def index(request,):
     #all_contact = Contact.objects.all()
-    return render(request, 'list.html',)
+    return render(request, 'new-entry.html',)
 
 
